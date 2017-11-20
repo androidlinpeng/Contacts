@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="contacts_colorPrimary">#2d2c2c</color>
+    <color name="contacts_colorPrimaryDark">#252323</color>
+    <color name="contacts_colorAccent">#201f1f</color>
+
+    <color name="contacts_backgroundColor">#ebebeb</color>
+    <color name="contacts_white">#ffffff</color>
+</resources>

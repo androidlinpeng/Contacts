@@ -1,0 +1,8 @@
+{
+	modules:[
+		{
+		    name:'divaddress',
+		    class:'com.contacts.APIModuleDemo'
+		}
+	]
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/contacts_backgroundColor"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/contacts_white">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:drawableLeft="@drawable/contact_ic_search"
+            android:drawablePadding="15dp"
+            android:background="@drawable/contacts_bg_edittext"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:padding="4dp"
+            android:hint="搜索"
+            android:textColorHint="@android:color/darker_gray"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="#353535" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/search"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:background="@color/contacts_backgroundColor" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/contacts_backgroundColor" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:descendantFocusability="afterDescendants"
+                android:divider="@null"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="false"
+                android:scrollbars="none"
+                android:visibility="visible" />
+
+            <com.contacts.Sidebar
+                android:id="@+id/sidebar"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/floating_header"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/contacts_bg_textview"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

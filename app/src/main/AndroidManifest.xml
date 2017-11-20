@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.contacts">
+
+    <application
+        android:name="com.uzmap.pkg.uzapp.UZApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/contacts_name">
+        <meta-data
+            android:name="uz_version"
+            android:value="1.2.0" />
+
+        <activity
+            android:name="com.uzmap.pkg.EntranceActivity"
+            android:configChanges="orientation|locale|keyboardHidden|keyboard|screenLayout|screenSize|smallestScreenSize"
+            android:label="@string/contacts_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/contacts_Theme"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

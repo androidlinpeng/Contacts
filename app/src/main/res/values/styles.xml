@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="contacts_Theme" >
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

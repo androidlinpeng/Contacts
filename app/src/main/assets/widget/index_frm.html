@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+	<meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+	<title>WinA</title>
+	<link rel="stylesheet" type="text/css" href="css/api.css" />
+	<link rel="stylesheet" type="text/css" href="css/box.css" />
+	<script type="text/javascript" src="script/public.js"></script>
+	<style>
+    	p{
+    		color:#999;
+    		padding:5px;
+    	}
+    </style>
+	<script type="text/javascript">
+
+		var uzmoduledemo = null;
+		apiready = function(){
+	    	uzmoduledemo = api.require('divaddress');
+	    }
+
+		function contacts(){
+		    var param = {X:0,Y:48,W:document.body.clientWidth,H:document.body.clientHeight,msg:{ "list": [ { "name": "赵秀萍", "PhoneNumber": "4827", "icon": "http://img.bss.cn.net/201711171629135569.png", "pinyin": "4827" }, { "name": "王文杰", "PhoneNumber": "4834", "icon": "http://f10.baidu.com/it/u=4108176325,1021243630&fm=72", "pinyin": "4834" }, { "name": "付凤兰", "PhoneNumber": "4851", "icon": "http://img2.imgtn.bdimg.com/it/u=3200373527,2802703123&fm=27&gp=0.jpg", "pinyin": "4851" }, { "name": "苏云霞", "PhoneNumber": "4870", "icon": "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3952827993,1779282683&fm=58", "pinyin": "4870" }, { "name": "边春玲", "PhoneNumber": "4872", "icon": "http://avatar.csdn.net/D/E/F/3_yan943789510.jpg", "pinyin": "4872" }, { "name": "王欣", "PhoneNumber": "4877", "icon": "http://avatar.csdn.net/D/E/F/3_yan943789510.jpg", "pinyin": "4877" }, { "name": "苏敏萍", "PhoneNumber": "4954", "icon": "http://avatar.csdn.net/D/E/F/3_yan943789510.jpg", "pinyin": "4954" }, { "name": "莫丽丽", "PhoneNumber": "4872", "icon": "http://avatar.csdn.net/D/E/F/3_yan943789510.jpg", "pinyin": "4872" }, { "name": "李莫愁", "PhoneNumber": "4877", "icon": "http://avatar.csdn.net/D/E/F/3_yan943789510.jpg", "pinyin": "4877" }, { "name": "夏夏", "PhoneNumber": "4954", "icon": "http://avatar.csdn.net/D/E/F/3_yan943789510.jpg", "pinyin": "4954" }, { "name": "阿雅", "PhoneNumber": "6729", "icon": "", "pinyin": "6729" } ] }};
+			var resultCallback = function(tabstr, err){
+				document.getElementById("activity_result").innerHTML = JSON.stringify(tabstr);
+				alert(JSON.stringify(tabstr));
+			}
+	        uzmoduledemo.contacts(param, resultCallback);
+		}
+
+		function hiddenlist(){
+		    var param = {X:0,Y:48,W:document.body.clientWidth,H:document.body.clientHeight,msg:{ "list": [ { "name": "赵秀萍", "PhoneNumber": "4827", "icon": "http://img.bss.cn.net/201711171629135569.png", "pinyin": "4827" }, { "name": "王文杰", "PhoneNumber": "4834", "icon": "http://f10.baidu.com/it/u=4108176325,1021243630&fm=72", "pinyin": "4834" }, { "name": "付凤兰", "PhoneNumber": "4851", "icon": "http://img2.imgtn.bdimg.com/it/u=3200373527,2802703123&fm=27&gp=0.jpg", "pinyin": "4851" }, { "name": "苏云霞", "PhoneNumber": "4870", "icon": "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3952827993,1779282683&fm=58", "pinyin": "4870" }, { "name": "边春玲", "PhoneNumber": "4872", "icon": "http://avatar.csdn.net/D/E/F/3_yan943789510.jpg", "pinyin": "4872" }, { "name": "王欣", "PhoneNumber": "4877", "icon": "http://avatar.csdn.net/D/E/F/3_yan943789510.jpg", "pinyin": "4877" }, { "name": "苏敏萍", "PhoneNumber": "4954", "icon": "http://avatar.csdn.net/D/E/F/3_yan943789510.jpg", "pinyin": "4954" }, { "name": "莫丽丽", "PhoneNumber": "4872", "icon": "http://avatar.csdn.net/D/E/F/3_yan943789510.jpg", "pinyin": "4872" }, { "name": "李莫愁", "PhoneNumber": "4877", "icon": "http://avatar.csdn.net/D/E/F/3_yan943789510.jpg", "pinyin": "4877" }, { "name": "夏夏", "PhoneNumber": "4954", "icon": "http://avatar.csdn.net/D/E/F/3_yan943789510.jpg", "pinyin": "4954" }, { "name": "阿雅", "PhoneNumber": "6729", "icon": "", "pinyin": "6729" } ] }};
+			var resultCallback = function(tabstr, err){
+			}
+	        uzmoduledemo.hiddenlist(param, resultCallback);
+		}
+
+	</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="main">
+		<br>
+		<div class="clickbtn" tapmode="active" onclick="contacts()" >显示通信录</div>
+		<div class="clickbtn" tapmode="active" onclick="hiddenlist()" >隐藏通信录</div>
+		<div id="activity_result" style="width:100%;word-wrap: break-word;word-break: normal;"></div><br><br>
+	</div>
+</div>
+</body>
+</html>

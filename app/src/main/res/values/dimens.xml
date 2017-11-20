@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="contacts_sider_bar_textsize">14sp</dimen>
+    <dimen name="contacts_height_top_bar">56dp</dimen>
+    <dimen name="contacts_top_bar_title_size">18sp</dimen>
+    <dimen name="contacts_socket_tab_text_size">12sp</dimen>
+
+</resources>
